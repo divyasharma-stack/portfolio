@@ -4,195 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divya Sharma - Product Manager & Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        :root {
-            --primary: #1e293b; /* Dark Slate */
-            --accent: #4f46e5;  /* Modern Indigo */
-            --bg: #f8fafc;
-            --text: #334155;
-        }
-
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg);
-            color: var(--text);
+            background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+            color: #1e293b;
             line-height: 1.6;
         }
-
         header {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
             padding: 40px 20px;
             text-align: center;
+            position: relative;
         }
-
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        header h1 {
-            margin: 10px 0;
-            font-size: 2.5rem;
-            color: #ffffff; /* High contrast visibility */
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            overflow: hidden;
             margin-bottom: 20px;
+            border: 3px solid #10b981;
         }
-
-        .contact a {
-            color: #cbd5e1;
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #1e40af;
+            padding: 10px 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: white;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9rem;
+            font-weight: 600;
             transition: color 0.3s;
         }
-
-        .contact a:hover {
-            color: white;
-            text-decoration: underline;
+        nav a:hover {
+            color: #10b981;
         }
-
         .container {
             max-width: 900px;
-            margin: -30px auto 40px;
-            padding: 40px;
+            margin: 20px auto;
+            padding: 20px;
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
-
+        h1, h2 {
+            color: #1e40af;
+        }
         h2 {
-            color: var(--primary);
-            border-left: 5px solid var(--accent);
-            padding-left: 15px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 10px;
             margin-top: 40px;
-            font-size: 1.5rem;
         }
-
-        h3 {
-            color: var(--accent);
-            margin-bottom: 5px;
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .skill-pill {
-            background: #eef2ff;
-            color: var(--accent);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
         ul {
-            padding-left: 20px;
+            list-style-type: none;
+            padding: 0;
         }
-
         li {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
         }
-
-        .date {
-            color: #64748b;
-            font-style: italic;
-            font-size: 0.9rem;
+        li:before {
+            content: "•";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
-
         a {
-            color: var(--accent);
+            color: #2563eb;
             text-decoration: none;
+            transition: color 0.3s;
         }
-
         a:hover {
-            text-decoration: underline;
+            color: #10b981;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            margin: 0 15px;
+            font-size: 24px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #10b981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #059669;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e40af;
+            color: white;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin: 10px 0;
+            }
+            .hero {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <img src="profile.png" alt="Divya Sharma" class="profile-img">
-        <h1>Divya Sharma</h1>
-        <p>Product Manager | Data Analyst</p>
-        <div class="contact">
-            <span>Mountain View, CA</span> | 
-            <a href="mailto:divya.bullseye@gmail.com">Email</a> | 
-            <a href="https://linkedin.com/in/divyasharma" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/divyasharma" target="_blank">GitHub</a>
+        <div class="hero">
+            <div class="profile-img">
+                <img src="your-photo.jpg" alt="Divya Sharma"> <!-- Replace 'your-photo.jpg' with your actual photo file path or URL -->
+            </div>
+            <h1>Divya Sharma</h1>
+            <p>Product Manager | Data Analyst</p>
+            <div class="contact">
+                Mountain View (CA) | (669)-294-3389 | <a href="mailto:divya.bullseye@gmail.com"><i class="fas fa-envelope"></i></a> | <a href="https://www.linkedin.com/in/divyasharmas/" target="_blank"><i class="fab fa-linkedin"></i></a> | <a href="https://github.com/divyasharma" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <section id="summary">
             <h2>Professional Summary</h2>
-            <p>Analytical professional with experience in data analytics and product strategy. Skilled in translating insights into action through dashboards, KPIs, and process automation. Expert in SQL, Tableau, R, Power BI, and Agile methodologies. Dual Master of Science in Social & Applied Economics and MBA (HR).</p>
+            <p>Analytical professional with experience in data analytics and product strategy. Skilled in translating insights into action through dashboards, KPIs, and process automation. Skilled in SQL, Tableau, R, Power BI, and Agile methodologies. Dual Master of Science in Social & Applied Economics and MBA (HR).</p>
         </section>
 
         <section id="skills">
-            <h2>Technical Proficiencies</h2>
-            <div class="skills-grid">
-                <span class="skill-pill">A/B Testing</span>
-                <span class="skill-pill">KPI Analysis</span>
-                <span class="skill-pill">SQL</span>
-                <span class="skill-pill">Tableau</span>
-                <span class="skill-pill">Power BI</span>
-                <span class="skill-pill">Agile Scrum</span>
-                <span class="skill-pill">Python/R</span>
-                <span class="skill-pill">Product Roadmaps</span>
-                <span class="skill-pill">Salesforce Automation</span>
-            </div>
+            <h2>Skills & Certifications</h2>
+            <p><strong>Skills:</strong> A/B Testing • KPI Analysis • Experiment Design • Data Visualization • Forecasting • Product Roadmaps • Agile Scrum • Stakeholder Alignment • Storytelling with Data</p>
+            <p><strong>Certifications & Training:</strong></p>
+            <ul>
+                <li>SQL Essential Training (LinkedIn 2025)</li>
+                <li>Power BI (Microsoft 2024)</li>
+                <li>Amazon EMR / Wolfram (2023–24)</li>
+                <li>Foundations of Project Management (Google 2023)</li>
+                <li>Agile Methodologies (2024)</li>
+            </ul>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
-            
-            <h3>Product Manager | The KeelWorks Foundation</h3>
-            <span class="date">May 2025 - Present</span>
+            <h3>Product Manager | The KeelWorks Foundation (Remote)</h3>
+            <p>May 2025 - Present</p>
             <ul>
                 <li>Lead analytics-based product strategy for DEEL HRIS, defining KPIs and Agile sprint goals.</li>
                 <li>Built usage dashboards that increased feature adoption by 35%.</li>
-                <li>Automated recruitment workflows with Salesforce, reducing manual tasks 25%.</li>
+                <li>Automated recruitment → onboarding workflows with Salesforce, reducing manual tasks 25%.</li>
             </ul>
 
             <h3>Research Assistant | Wright State University</h3>
-            <span class="date">Feb 2025 - Apr 2025</span>
+            <p>Feb 2025 - Apr 2025</p>
             <ul>
                 <li>Conducted advanced econometric analysis using STATA and R for PhD-level research.</li>
                 <li>Created models to derive insights from large survey datasets to support academic publications.</li>
             </ul>
+
+            <h3>VC Industry Research Analysis Extern | Energy Innovation Capital</h3>
+            <p>Sep 2024 - Oct 2024</p>
+            <ul>
+                <li>Mapped AI/ML trends in energy and heavy industry for internal product/market strategy.</li>
+                <li>Created competitive landscape reports and investment roadmaps.</li>
+            </ul>
+
+            <h3>Branch Manager | Bullseye Knowledge System Ltd.</h3>
+            <p>Jul 2019 - Apr 2021</p>
+            <ul>
+                <li>Managed 12-member team and introduced performance dashboards tracking sales KPIs.</li>
+                <li>Led business analysis (GAP/SWOT) efforts that expanded local market share by 50%.</li>
+            </ul>
+
+            <h3>Data Analyst | Sacred Heart Institute</h3>
+            <p>Nov 2017 - Dec 2018</p>
+            <ul>
+                <li>Developed ETL pipelines and Tableau dashboards improving reporting efficiency 30%.</li>
+                <li>Optimized student conversion funnel through data experimentation, boosting enrollments 40%.</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Research & Projects (Launches & Initiatives)</h2>
+            <ul>
+                <li><strong>Maven Airlines Satisfaction Analysis:</strong> Analyzed 129K+ records via SQL & Tableau to pinpoint drivers of customer satisfaction.</li>
+                <li><strong>Climate Change & Inequality:</strong> Collected and cleaned data from 100+ countries; analyzed global inequality and emissions trends using R & STATA.</li>
+                <li><strong>Forecasting for Commercial Banking:</strong> ARIMA + regression employment forecasts.</li>
+            </ul>
         </section>
 
         <section id="achievements">
-            <h2>Key Achievements</h2>
+            <h2>Achievements</h2>
             <ul>
-                <li><strong>Publication:</strong> “A Job Guarantee: Student Ideas,” International Journal of Pluralism and Economics Education (2025). <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJPEE.2024.144145" target="_blank">[View]</a></li>
-                <li><strong>HR Management Judge:</strong> Collegiate DECA International Conference (2025) — Evaluated business strategy and analytical decision-making.</li>
+                <li><strong>Publication:</strong> “A Job Guarantee: Student Ideas,” published in International Journal of Pluralism and Economics Education (2025); archived in Wright State CoreScholar (2024). <a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJPEE.2024.144145" target="_blank">Link to Publication</a> | <a href="https://corescholar.libraries.wright.edu/econ_student_papers_economies/27/" target="_blank">CoreScholar Archive</a></li>
+                <li><strong>HR Management Judge:</strong> Collegiate DECA International Conference, San Francisco (2025) — evaluated students on business strategy, communication, and analytical decision-making.</li>
+                <li><strong>Best National Cadet Corps Award:</strong> Recognized for outstanding leadership and service in the National Cadet Corps.</li>
+                <li><strong>Gold Medal in Shooting:</strong> Achieved top performance in competitive shooting events.</li>
+                <li><strong>3rd Award in Youth Festival:</strong> Secured third place in a youth festival competition, showcasing talent and participation.</li>
             </ul>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <p><strong>MS, Social and Applied Economics</strong> – Wright State University (2024)</p>
-            <p><strong>MBA, Human Resources</strong> – Lovely Professional University (2015)</p>
+            <ul>
+                <li>MS, Social and Applied Economics – Wright State University, Fairborn, OH (Dec 2024)</li>
+                <li>MBA, Human Resources – Lovely Professional University, India (Apr 2015)</li>
+            </ul>
         </section>
+
+        <div style="text-align: center;">
+            <a href="mailto:divya.bullseye@gmail.com" class="cta-button">Contact Me</a>
+        </div>
     </div>
 
+    <footer>
+        <p>&copy; 2025 Divya Sharma. All rights reserved.</p>
+    </footer>
 </body>
 </html>
