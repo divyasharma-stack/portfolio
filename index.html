@@ -11,12 +11,12 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
             color: #1e293b;
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -33,17 +33,21 @@
             border-radius: 50%;
             overflow: hidden;
             margin-bottom: 20px;
-            border: 3px solid #10b981;
+            border: 3px solid #f97316;
         }
         .profile-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+        h1 {
+            color: #ffffff; /* White for high contrast and visibility against the teal-cyan background */
+            margin: 10px 0;
+        }
         nav {
             position: sticky;
             top: 0;
-            background-color: #1e40af;
+            background-color: #0d9488;
             padding: 10px 0;
             z-index: 100;
         }
@@ -64,7 +68,7 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #10b981;
+            color: #f97316;
         }
         .container {
             max-width: 900px;
@@ -74,11 +78,9 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
-        h1, h2 {
-            color: #1e40af;
-        }
         h2 {
-            border-bottom: 3px solid #10b981;
+            color: #0d9488;
+            border-bottom: 3px solid #f97316;
             padding-bottom: 10px;
             margin-top: 40px;
         }
@@ -93,7 +95,7 @@
         }
         li:before {
             content: "•";
-            color: #10b981;
+            color: #f97316;
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -104,7 +106,7 @@
             transition: color 0.3s;
         }
         a:hover {
-            color: #10b981;
+            color: #f97316;
         }
         .contact {
             margin-top: 20px;
@@ -112,10 +114,17 @@
         .contact a {
             margin: 0 15px;
             font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        .contact a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
         }
         .cta-button {
             display: inline-block;
-            background-color: #10b981;
+            background-color: #f97316;
             color: white;
             padding: 12px 24px;
             border-radius: 5px;
@@ -125,12 +134,12 @@
             transition: background-color 0.3s;
         }
         .cta-button:hover {
-            background-color: #059669;
+            background-color: #ea580c;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #1e40af;
+            background-color: #0d9488;
             color: white;
             margin-top: 40px;
         }
@@ -151,7 +160,7 @@
     <header>
         <div class="hero">
             <div class="profile-img">
-                <img src="divya-photo.jpg.png" alt="Divya Sharma"> <!-- Replace 'your-photo.jpg' with your actual photo file path or URL -->
+                <img src="divya-photo.jpg" alt="Divya Sharma">
             </div>
             <h1>Divya Sharma</h1>
             <p>Product Manager | Data Analyst</p>
